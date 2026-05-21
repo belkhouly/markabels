@@ -2,23 +2,89 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>متجر ماركابيلز</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر ماركابيلز | لأرقى البيجامات</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>أهلاً بك في متجر ماركابيلز</h1>
+    <header class="animated-bg">
+        <div class="header-content">
+            <h1>متجر ماركابيلز</h1>
+            <p>وجهتك الأولى لأرقى وأجمل البيجامات من أفضل الماركات والشركات العالمية والمحلية.</p>
+            <div class="header-buttons">
+                <a href="#products" class="btn primary-btn"><i class="fas fa-shopping-bag"></i> تصفح التشكيلة</a>
+                <a href="#contact" class="btn secondary-btn"><i class="fas fa-phone"></i> اتصل بنا</a>
+            </div>
+        </div>
     </header>
 
     <main>
-        <p>هذا هو الموقع الرسمي لمتجرنا. نحن نقدم أفضل المنتجات لك!</p>
-        
-        <div class="buttons">
-            <button class="btn">تصفح المنتجات</button>
-            <button class="btn">اتصل بنا</button>
-        </div>
+        <section class="brands-section">
+            <h2>شركاء النجاح وماركات نثق بها</h2>
+            <div class="brands-list">
+                <span class="brand-item">ماركة روزالين</span>
+                <span class="brand-item">مصنع سويت دريمز</span>
+                <span class="brand-item">ماركة كومفي</span>
+                <span class="brand-item">بيجاما ستايل</span>
+            </div>
+        </section>
+
+        <section id="products" class="products-section">
+            <h2>أحدث تشكيلات البيجامات</h2>
+            <div class="product-grid">
+                
+                <div class="product-card">
+                    <div class="img-placeholder"><i class="fas fa-image"></i> صورة الموديل</div>
+                    <h3>بيجامة قطنية صيفية</h3>
+                    <p class="brand-name">ماركة روزالين</p>
+                    <p class="desc">تصميم مريح وأنيق باللون الوردي الفاتح، يوفر لك راحة لا مثيل لها أثناء النوم.</p>
+                    <span class="price">150 درهم</span>
+                    <button class="buy-btn">أضف للسلة <i class="fas fa-cart-plus"></i></button>
+                </div>
+
+                <div class="product-card">
+                    <div class="img-placeholder"><i class="fas fa-image"></i> صورة الموديل</div>
+                    <h3>طقم بيجامة حرير</h3>
+                    <p class="brand-name">مصنع سويت دريمز</p>
+                    <p class="desc">نعومة الحرير الفاخر مع تطريز دقيق يناسب ذوقك الراقي.</p>
+                    <span class="price">220 درهم</span>
+                    <button class="buy-btn">أضف للسلة <i class="fas fa-cart-plus"></i></button>
+                </div>
+
+                <div class="product-card">
+                    <div class="img-placeholder"><i class="fas fa-image"></i> صورة الموديل</div>
+                    <h3>بيجامة شتوية دافئة</h3>
+                    <p class="brand-name">ماركة كومفي</p>
+                    <p class="desc">مصنوعة من خامة الفرو الناعم لتدفئة مثالية في الليالي الباردة.</p>
+                    <span class="price">180 درهم</span>
+                    <button class="buy-btn">أضف للسلة <i class="fas fa-cart-plus"></i></button>
+                </div>
+
+            </div>
+        </section>
     </main>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <h3>تواصل معنا</h3>
+            <p>يسعدنا الرد على استفساراتكم وتلقي طلباتكم عبر حساباتنا:</p>
+            <div class="social-icons">
+                <a href="#" class="instagram" title="انستجرام"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="facebook" title="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="whatsapp" title="واتساب"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="tiktok" title="تيك توك"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>جميع الحقوق محفوظة &copy; 2024 متجر ماركابيلز للبيجامات</p>
+        </div>
+    </footer>
 
 </body>
 </html>

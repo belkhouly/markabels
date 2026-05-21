@@ -1,20 +1,297 @@
-.buttons {
-    margin-top: 20px;
+/* إعدادات عامة وألوان الموقع الأساسية */
+:root {
+    --primary-pink: #ff69b4; /* وردي زاهي */
+    --light-pink: #ffe4e1; /* وردي فاتح جداً */
+    --gradient-1: #ff9a9e;
+    --gradient-2: #fecfef;
+    --dark-text: #2c3e50; /* أزرق داكن للنصوص */
+    --white: #ffffff;
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Tajawal', sans-serif;
+}
+
+body {
+    background-color: #fdfbfb;
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+/* =========================================
+   الواجهة العلوية والخلفية المتحركة
+   ========================================= */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.animated-bg {
+    /* خلفية متدرجة متحركة تعطي طابع رائع */
+    background: linear-gradient(-45deg, var(--gradient-1), var(--gradient-2), #fbc2eb, #a18cd1);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    color: var(--white);
+    text-align: center;
+    padding: 120px 20px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.header-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+/* الأزرار الرئيسية */
 .btn {
-    padding: 10px 20px;
-    margin: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #2c3e50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    transition: 0.3s;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    margin: 10px;
+    display: inline-block;
+    border: 2px solid transparent;
 }
 
-.btn:hover {
-    background-color: #34495e;
-    transform: scale(1.1);
+.primary-btn {
+    background-color: var(--white);
+    color: var(--primary-pink);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.4);
+}
+
+.primary-btn:hover {
+    background-color: var(--primary-pink);
+    color: var(--white);
+    border-color: var(--white);
+    transform: translateY(-5px);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: var(--white);
+    border-color: var(--white);
+}
+
+.secondary-btn:hover {
+    background-color: var(--white);
+    color: var(--primary-pink);
+    transform: translateY(-5px);
+}
+
+/* =========================================
+   قسم الماركات
+   ========================================= */
+.brands-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--white);
+}
+
+.brands-section h2 {
+    color: var(--primary-pink);
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.brands-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.brand-item {
+    background-color: var(--light-pink);
+    padding: 15px 30px;
+    border-radius: 20px;
+    font-weight: bold;
+    color: var(--dark-text);
+    border: 2px dashed var(--primary-pink);
+    transition: transform 0.3s ease;
+}
+
+.brand-item:hover {
+    transform: scale(1.1) rotate(2deg);
+    background-color: var(--primary-pink);
+    color: var(--white);
+}
+
+/* =========================================
+   قسم قائمة المنتجات
+   ========================================= */
+.products-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.products-section h2 {
+    font-size: 2.5rem;
+    color: var(--dark-text);
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+.products-section h2::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 3px;
+    background-color: var(--primary-pink);
+    bottom: -10px;
+    left: 20%;
+    border-radius: 5px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: 5px solid transparent;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(255, 105, 180, 0.2);
+    border-bottom: 5px solid var(--primary-pink);
+}
+
+.img-placeholder {
+    background-color: var(--light-pink);
+    height: 220px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-pink);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.img-placeholder i {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.brand-name {
+    color: var(--primary-pink);
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.desc {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 20px;
+    min-height: 45px;
+}
+
+.price {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--dark-text);
+    margin-bottom: 20px;
+}
+
+.buy-btn {
+    background-color: var(--primary-pink);
+    color: var(--white);
+    border: none;
+    padding: 12px 0;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.buy-btn:hover {
+    background-color: #e0529b;
+    transform: scale(1.02);
+}
+
+/* =========================================
+   الفوتر وأزرار التواصل
+   ========================================= */
+footer {
+    background-color: var(--dark-text);
+    color: var(--white);
+    text-align: center;
+    padding: 50px 20px 20px 20px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    margin-top: 40px;
+}
+
+.footer-content h3 {
+    font-size: 2rem;
+    color: var(--primary-pink);
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    margin: 30px 0;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255,255,255,0.1);
+    color: var(--white);
+    font-size: 1.5rem;
+    border-radius: 50%;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* ألوان الماركات عند تمرير الماوس */
+.social-icons a.instagram:hover { background: #E1306C; transform: translateY(-5px); }
+.social-icons a.facebook:hover { background: #1877F2; transform: translateY(-5px); }
+.social-icons a.whatsapp:hover { background: #25D366; transform: translateY(-5px); }
+.social-icons a.tiktok:hover { background: #000000; transform: translateY(-5px); box-shadow: 0 0 10px rgba(255,255,255,0.5); }
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    font-size: 0.9rem;
+    color: #aaa;
 }
