@@ -3,87 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجر ماركابيلز | لأرقى البيجامات</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <link rel="stylesheet" href="style.css">
+    <title>Markabels | تشكيلة الأزياء والبيجامات الفاخرة</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <header class="animated-bg">
-        <div class="header-content">
-            <h1>متجر ماركابيلز</h1>
-            <p>وجهتك الأولى لأرقى وأجمل البيجامات من أفضل الماركات والشركات العالمية والمحلية.</p>
-            <div class="header-buttons">
-                <a href="#products" class="btn primary-btn"><i class="fas fa-shopping-bag"></i> تصفح التشكيلة</a>
-                <a href="#contact" class="btn secondary-btn"><i class="fas fa-phone"></i> اتصل بنا</a>
-            </div>
+    <header class="main-header">
+        <div class="logo">
+            <h1>MARKABELS</h1>
+            <p>أزياء تقليدية وبيجامات فاخرة ذات جودة عالية</p>
         </div>
     </header>
 
-    <main>
-        <section class="brands-section">
-            <h2>شركاء النجاح وماركات نثق بها</h2>
-            <div class="brands-list">
-                <span class="brand-item">ماركة روزالين</span>
-                <span class="brand-item">مصنع سويت دريمز</span>
-                <span class="brand-item">ماركة كومفي</span>
-                <span class="brand-item">بيجاما ستايل</span>
+    <section class="hero-section">
+        <div class="hero-overlay">
+            <h2>التشكيلة الجديدة الحصرية</h2>
+            <p>خامات ممتازة، قصات مريحة، وأناقة تليق بكِ. اطلبي الآن مباشرة عبر الواتساب</p>
+        </div>
+    </section>
+
+    <main class="products-container">
+        
+        <div class="product-card">
+            <div class="image-container">
+                <img src="prod1.jpg" alt="بيجامة ريب الفاخرة">
+                <span class="badge">1ère Qualité</span>
             </div>
-        </section>
-
-        <section id="products" class="products-section">
-            <h2>أحدث تشكيلات البيجامات</h2>
-            <div class="product-grid">
-                
-                <div class="product-card">
-                    <div class="img-placeholder"><i class="fas fa-image"></i> صورة الموديل</div>
-                    <h3>بيجامة قطنية صيفية</h3>
-                    <p class="brand-name">ماركة روزالين</p>
-                    <p class="desc">تصميم مريح وأنيق باللون الوردي الفاتح، يوفر لك راحة لا مثيل لها أثناء النوم.</p>
-                    <span class="price">150 درهم</span>
-                    <button class="buy-btn">أضف للسلة <i class="fas fa-cart-plus"></i></button>
-                </div>
-
-                <div class="product-card">
-                    <div class="img-placeholder"><i class="fas fa-image"></i> صورة الموديل</div>
-                    <h3>طقم بيجامة حرير</h3>
-                    <p class="brand-name">مصنع سويت دريمز</p>
-                    <p class="desc">نعومة الحرير الفاخر مع تطريز دقيق يناسب ذوقك الراقي.</p>
-                    <span class="price">220 درهم</span>
-                    <button class="buy-btn">أضف للسلة <i class="fas fa-cart-plus"></i></button>
-                </div>
-
-                <div class="product-card">
-                    <div class="img-placeholder"><i class="fas fa-image"></i> صورة الموديل</div>
-                    <h3>بيجامة شتوية دافئة</h3>
-                    <p class="brand-name">ماركة كومفي</p>
-                    <p class="desc">مصنوعة من خامة الفرو الناعم لتدفئة مثالية في الليالي الباردة.</p>
-                    <span class="price">180 درهم</span>
-                    <button class="buy-btn">أضف للسلة <i class="fas fa-cart-plus"></i></button>
-                </div>
-
+            <div class="product-info">
+                <h3>بيجامة ريب فاخرة</h3>
+                <p class="product-code">COD: 2225AL</p>
+                <p class="sizes">المقاسات المتوفرة: <span class="size-tag">L</span> <span class="size-tag">XL</span> <span class="size-tag">2XL</span></p>
+                <a href="https://wa.me/212600000000?text=مرحباً%20ماركابيلز،%20أود%20طلب%20بيجامة%20ريب%20ذات%20الكود%202225AL" target="_blank" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> اطلب الآن عبر الواتساب
+                </a>
             </div>
-        </section>
+        </div>
+
+        <div class="product-card">
+            <div class="image-container">
+                <img src="prod2.jpg" alt="بيجامة برودري">
+                <span class="badge">1ère Qualité</span>
+            </div>
+            <div class="product-info">
+                <h3>بيجامة برودري راقية</h3>
+                <p class="product-code">COD: 2203CH</p>
+                <p class="sizes">المقاسات المتوفرة: <span class="size-tag">M</span> <span class="size-tag">L</span> <span class="size-tag">XL</span> <span class="size-tag">2XL</span></p>
+                <a href="https://wa.me/212600000000?text=مرحباً%20ماركابيلز،%20أود%20طلب%20بيجامة%20برودري%20ذات%20الكود%202203CH" target="_blank" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> اطلب الآن عبر الواتساب
+                </a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="image-container">
+                <img src="prod3.jpg" alt="بيجامة بيكي">
+                <span class="badge">1ère Qualité</span>
+            </div>
+            <div class="product-info">
+                <h3>بيجامة بيكي عصرية</h3>
+                <p class="product-code">COD: 2216CH</p>
+                <p class="sizes">المقاسات المتوفرة: <span class="size-tag">L</span> <span class="size-tag">XL</span> <span class="size-tag">2XL</span> <span class="size-tag">3XL</span></p>
+                <a href="https://wa.me/212600000000?text=مرحباً%20ماركابيلز،%20أود%20طلب%20بيجامة%20بيكي%20ذات%20الكود%202216CH" target="_blank" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> اطلب الآن عبر الواتساب
+                </a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="image-container">
+                <img src="prod4.jpg" alt="مخور حرير إماراتي ستراس أخضر">
+                <span class="badge">1ère Qualité</span>
+            </div>
+            <div class="product-info">
+                <h3>مخور حرير إماراتي ستراس (أخضر)</h3>
+                <p class="product-code">COD: 2195M</p>
+                <p class="sizes">المقاسات المتوفرة: <span class="size-tag">XL</span> <span class="size-tag">2XL</span></p>
+                <a href="https://wa.me/212600000000?text=مرحباً%20ماركابيلز،%20أود%20طلب%20مخور%20الحرير%20الإماراتي%20الأخضر%20كود%202195M" target="_blank" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> اطلب الآن عبر الواتساب
+                </a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="image-container">
+                <img src="prod5.jpg" alt="مخور حرير إماراتي ستراس">
+                <span class="badge">1ère Qualité</span>
+            </div>
+            <div class="product-info">
+                <h3>مخور حرير إماراتي ستراس (لوني)</h3>
+                <p class="product-code">COD: 2195M</p>
+                <p class="sizes">المقاسات المتوفرة: <span class="size-tag">XL</span> <span class="size-tag">2XL</span></p>
+                <a href="https://wa.me/212600000000?text=مرحباً%20ماركابيلز،%20أود%20طلب%20مخور%20الحرير%20الإماراتي%20كود%202195M" target="_blank" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> اطلب الآن عبر الواتساب
+                </a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="image-container">
+                <img src="prod6.jpg" alt="كسوة قطرية">
+                <span class="badge">1ère Qualité</span>
+            </div>
+            <div class="product-info">
+                <h3>كسوة قطرية فاخرة</h3>
+                <p class="product-code">COD: 2232K</p>
+                <p class="sizes">المقاسات المتوفرة: <span class="size-tag">XL</span> <span class="size-tag">2XL</span> <span class="size-tag">3XL</span></p>
+                <a href="https://wa.me/212600000000?text=مرحباً%20ماركابيلز،%20أود%20طلب%20الكسوة%20القطرية%20ذات%20الكود%202232K" target="_blank" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> اطلب الآن عبر الواتساب
+                </a>
+            </div>
+        </div>
+
     </main>
 
-    <footer id="contact">
-        <div class="footer-content">
-            <h3>تواصل معنا</h3>
-            <p>يسعدنا الرد على استفساراتكم وتلقي طلباتكم عبر حساباتنا:</p>
-            <div class="social-icons">
-                <a href="#" class="instagram" title="انستجرام"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="facebook" title="فيسبوك"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="whatsapp" title="واتساب"><i class="fab fa-whatsapp"></i></a>
-                <a href="#" class="tiktok" title="تيك توك"><i class="fab fa-tiktok"></i></a>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>جميع الحقوق محفوظة &copy; 2024 متجر ماركابيلز للبيجامات</p>
-        </div>
+    <footer class="main-footer">
+        <p>&copy; 2026 جميع الحقوق محفوظة لماركة <strong>Markabels</strong></p>
+        <p>صنع بكل حب لتوفير أرقى الأزياء التقليدية والمنزلية</p>
     </footer>
 
 </body>
