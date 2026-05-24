@@ -3,139 +3,134 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Cairo', sans-serif;
-    scroll-behavior: smooth;
 }
 
-body { background-color: #f9f9f9; color: #333; line-height: 1.6; padding-bottom: 70px; }
-
-/* الشريط الجانبي (Sidebar) */
-.sidebar {
-    position: fixed;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    background-color: #1a1a1a;
-    padding: 20px 15px;
-    border-radius: 15px 0 0 15px;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    box-shadow: -2px 0 15px rgba(0,0,0,0.5);
-    border: 2px solid #d4af37;
-    border-right: none;
+body {
+    background-color: #fff;
+    color: #1a1a1a;
 }
 
-.sidebar-link {
-    color: white;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 0.85rem;
-    font-weight: bold;
-    transition: transform 0.3s, color 0.3s;
-}
-
-.sidebar-link .icon { font-size: 1.5rem; margin-bottom: 5px; }
-
-.sidebar-link:hover { color: #d4af37; transform: scale(1.1); }
-
-.catalog-link { color: #25D366; }
-.catalog-link:hover { color: #1ebd5a; }
-
-/* لشاشات الهواتف (ينتقل الشريط للأسفل) */
-@media (max-width: 768px) {
-    .sidebar {
-        top: auto;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        transform: none;
-        flex-direction: row;
-        justify-content: space-around;
-        border-radius: 15px 15px 0 0;
-        padding: 10px;
-        border: 2px solid #d4af37;
-        border-bottom: none;
-    }
-    .sidebar-link .icon { font-size: 1.2rem; margin-bottom: 2px; }
-    .sidebar-link { font-size: 0.75rem; }
-}
+h1, h2, h3, h4, h5, h6 { color: #222; }
+a { text-decoration: none; }
+.section-p1 { padding: 40px 80px; }
 
 /* الشريط العلوي */
-.header {
-    background-color: #1a1a1a;
-    padding: 15px 20px;
-    text-align: center;
-    border-bottom: 3px solid #d4af37;
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: #e3e6f3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
-.header h2 { color: #d4af37; letter-spacing: 2px; }
+#header .logo { font-size: 2rem; font-weight: 700; color: #222; }
 
-/* الواجهة - الصورة هنا تم تعديلها إلى prod7.jpg */
-.hero-section {
-    background-image: url('prod7.jpg');
+#navbar { display: flex; align-items: center; justify-content: center; list-style: none; }
+#navbar li { padding: 0 20px; }
+#navbar li a {
+    font-size: 16px; font-weight: 600; color: #1a1a1a;
+    transition: 0.3s ease;
+}
+#navbar li a:hover, #navbar li a.active { color: #088178; }
+
+/* قسم الواجهة (Hero) */
+#hero {
+    height: 60vh;
     background-size: cover;
     background-position: center;
-    height: 70vh;
+    padding: 0 80px;
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
-    align-items: center;
     position: relative;
 }
 
-.hero-overlay {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 40px;
-    border-radius: 10px;
-    text-align: center;
-    color: white;
-    border: 2px solid #d4af37;
+/* طبقة تعتيم خفيفة فوق الصورة إذا كانت فاتحة جداً */
+#hero::before {
+    content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(255, 255, 255, 0.5); z-index: 1;
 }
 
-.hero-overlay h1 { font-size: 2.5rem; color: #d4af37; margin-bottom: 10px; }
+#hero h4, #hero h2, #hero h1, #hero p, #hero .btn-shop { position: relative; z-index: 2; }
 
-/* المنتجات */
-.products-section { padding: 50px 20px; max-width: 1200px; margin: 0 auto; }
-.products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+#hero h4 { padding-bottom: 15px; color: #222; font-size: 1.5rem; }
+#hero h1 { color: #088178; font-size: 3rem; margin-bottom: 10px; }
+#hero h2 { font-size: 2.5rem; color: #222; }
+#hero p { margin-bottom: 20px; font-size: 1.1rem; color: #465b52; font-weight: bold; }
 
-.product-card {
-    background: #fff; border-radius: 10px; padding: 20px; text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1); position: relative;
-    border: 1px solid #eee; transition: transform 0.3s ease;
+.btn-shop {
+    background-color: transparent; color: #088178; border: 2px solid #088178;
+    padding: 12px 30px; font-size: 1rem; font-weight: 700; border-radius: 5px;
+    cursor: pointer; transition: 0.3s ease;
+}
+.btn-shop:hover { background-color: #088178; color: #fff; }
+
+/* قسم المنتجات (الشبكة) */
+#products { text-align: center; }
+#products h2 { font-size: 2.5rem; margin-bottom: 10px; }
+#products p { font-size: 1rem; color: #606063; margin-bottom: 40px; }
+
+.pro-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
 }
 
-.product-card:hover { transform: translateY(-10px); border-color: #d4af37; }
-
-.product-card img {
-    width: 100%; height: 400px; object-fit: cover;
-    border-radius: 5px; margin-bottom: 15px; background-color: #eee;
+.pro {
+    width: 100%;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    padding: 12px;
+    background: #fff;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    transition: 0.3s ease;
+    text-align: right; /* لمحاذاة النص مع اللغة العربية */
+    display: flex;
+    flex-direction: column;
 }
 
-.badge {
-    position: absolute; top: 30px; left: 10px; background-color: #d4af37; color: #1a1a1a;
-    padding: 5px 15px; font-weight: bold; border-radius: 20px;
+.pro:hover { box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.08); border-color: #088178; }
+
+.pro img {
+    width: 100%; height: 350px; object-fit: cover;
+    border-radius: 20px; margin-bottom: 15px;
 }
 
-.product-card h3 { font-size: 1.4rem; color: #1a1a1a; margin-bottom: 10px; }
-.cod { font-weight: bold; color: #555; }
-.sizes { color: #777; margin-bottom: 20px; }
+.pro .des { padding: 10px 0; flex-grow: 1; }
+.pro .des span { color: #606063; font-size: 12px; }
+.pro .des h5 { padding-top: 7px; color: #1a1a1a; font-size: 15px; font-weight: bold; }
+.pro .des .star { font-size: 14px; padding: 5px 0; }
+.pro .des h4 { padding-top: 7px; font-size: 16px; font-weight: bold; color: #088178; }
+.pro .sizes { font-size: 13px; color: #777; margin-top: 5px; }
 
-.btn-whatsapp {
-    display: block; background-color: #25D366; color: white;
-    padding: 12px; text-decoration: none; border-radius: 5px;
-    font-weight: bold; transition: background-color 0.3s;
+/* زر الواتساب داخل البطاقة */
+.btn-wa {
+    display: block; width: 100%; text-align: center; background-color: #e8f6ea;
+    color: #088178; border: 1px solid #cce7d0; padding: 12px; border-radius: 15px;
+    font-weight: bold; transition: 0.3s ease; margin-top: 15px;
 }
+.btn-wa:hover { background-color: #088178; color: #fff; }
 
-.btn-whatsapp:hover { background-color: #1ebd5a; }
+/* التذييل */
+footer { display: flex; flex-direction: column; background: #e3e6f3; padding-bottom: 20px !important; }
+footer .col { display: flex; flex-direction: column; align-items: center; margin-bottom: 20px; }
+footer p { font-size: 14px; color: #465b52; margin-bottom: 8px; }
+footer .follow { margin-top: 20px; text-align: center; }
+footer .follow h4 { font-size: 1.1rem; margin-bottom: 10px; }
+footer .follow a { color: #088178; font-weight: bold; margin: 0 5px; }
+footer .copyright { text-align: center; margin-top: 20px; border-top: 1px solid #cce7d0; padding-top: 20px; color: #465b52; }
 
-/* التذييل والتواصل الاجتماعي */
-.footer {
-    background-color: #1a1a1a; color: white; text-align: center;
-    padding: 30px 20px; margin-top: 40px; border-top: 3px solid #d4af37;
+/* استجابة الشاشات الصغيرة (الهواتف) */
+@media (max-width: 799px) {
+    .section-p1 { padding: 40px 20px; }
+    #header { padding: 15px 20px; flex-direction: column; gap: 15px; }
+    #navbar { gap: 10px; flex-wrap: wrap; }
+    #hero { padding: 0 20px; background-position: left; }
+    #hero h1 { font-size: 2.2rem; }
+    #hero h2 { font-size: 1.8rem; }
 }
-
-.social-icons { display: flex; justify-content: center; gap: 20px; margin-top: 15px; }
-.social-icons a { color: #d4af37; text-decoration: none; font-weight: bold; font-size: 1.2rem; }
-.social-icons a:hover { color: white; }

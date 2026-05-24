@@ -3,113 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MARKABELS - التشكيلة الجديدة</title>
+    <title>MARKABELS - المتجر</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body id="home">
+<body>
 
-    <nav class="sidebar">
-        <a href="#home" class="sidebar-link">
-            <span class="icon">🏠</span>
-            <span class="text">الرئيسية</span>
-        </a>
-        <a href="#products" class="sidebar-link">
-            <span class="icon">🛍️</span>
-            <span class="text">المنتجات</span>
-        </a>
-        <a href="https://wa.me/message/AOJQHDJCVOWJC1" target="_blank" class="sidebar-link catalog-link">
-            <span class="icon">📖</span>
-            <span class="text">الكتالوج</span>
-        </a>
-        <a href="#contact" class="sidebar-link">
-            <span class="icon">📞</span>
-            <span class="text">تواصل معنا</span>
-        </a>
-    </nav>
-
-    <header class="header">
-        <div class="logo-container">
-            <h2>MARKABELS</h2>
-        </div>
-    </header>
-
-    <section class="hero-section">
-        <div class="hero-overlay">
-            <h1>التشكيلة الجديدة والحصرية</h1>
-            <p>خامات ممتازة، قصات مريحة، وأناقة تليق بكِ.</p>
+    <section id="header">
+        <a href="#" class="logo">MARKABELS</a>
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="#home">الرئيسية</a></li>
+                <li><a href="#products">المنتجات</a></li>
+                <li><a href="https://wa.me/message/AOJQHDJCVOWJC1" target="_blank">الكتالوج</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
         </div>
     </section>
 
-    <section id="products" class="products-section">
-        <div class="products-grid">
+    <section id="hero" style="background-image: url('prod7.jpg');">
+        <h4>عروض حصرية</h4>
+        <h2>#التشكيلة_الجديدة</h2>
+        <h1>أناقة تليق بكِ</h1>
+        <p>خامات ممتازة، قصات مريحة، وأسعار مناسبة</p>
+        <a href="#products" class="btn-shop">تسوقي الآن</a>
+    </section>
+
+    <section id="products" class="section-p1">
+        <h2>أحدث الموديلات</h2>
+        <p>اكتشفي التشكيلة الصيفية والشتوية الراقية</p>
+        
+        <div class="pro-container">
             
-            <div class="product-card">
-                <img src="prod1.jpg" alt="بيجامة ريب فاخرة">
-                <div class="badge">1ère Qualité</div>
-                <h3>بيجامة ريب فاخرة</h3>
-                <p class="cod">COD: 2225AL</p>
-                <p class="sizes">المقاسات المتوفرة: L, XL, 2XL</p>
-                <a href="https://wa.me/212617107971?text=أريد طلب بيجامة ريب فاخرة كود 2225AL" class="btn-whatsapp" target="_blank">اطلب الآن عبر الواتساب</a>
+            <div class="pro">
+                <img src="prod1.jpg" alt="بيجامة ريب">
+                <div class="des">
+                    <span>1ère Qualité</span>
+                    <h5>بيجامة ريب فاخرة</h5>
+                    <div class="star">⭐⭐⭐⭐⭐</div>
+                    <h4>COD: 2225AL</h4>
+                    <p class="sizes">المقاسات: L, XL, 2XL</p>
+                </div>
+                <a href="https://wa.me/212617107971?text=أريد طلب بيجامة ريب فاخرة كود 2225AL" class="btn-wa" target="_blank">طلب عبر الواتساب 🛒</a>
             </div>
 
-            <div class="product-card">
-                <img src="prod2.jpg" alt="بيجامة برودري راقية">
-                <div class="badge">1ère Qualité</div>
-                <h3>بيجامة برودري راقية</h3>
-                <p class="cod">COD: 2203CH</p>
-                <p class="sizes">المقاسات المتوفرة: M, L, XL, 2XL</p>
-                <a href="https://wa.me/212617107971?text=أريد طلب بيجامة برودري راقية كود 2203CH" class="btn-whatsapp" target="_blank">اطلب الآن عبر الواتساب</a>
+            <div class="pro">
+                <img src="prod2.jpg" alt="بيجامة برودري">
+                <div class="des">
+                    <span>1ère Qualité</span>
+                    <h5>بيجامة برودري راقية</h5>
+                    <div class="star">⭐⭐⭐⭐⭐</div>
+                    <h4>COD: 2203CH</h4>
+                    <p class="sizes">المقاسات: M, L, XL, 2XL</p>
+                </div>
+                <a href="https://wa.me/212617107971?text=أريد طلب بيجامة برودري راقية كود 2203CH" class="btn-wa" target="_blank">طلب عبر الواتساب 🛒</a>
             </div>
 
-            <div class="product-card">
-                <img src="prod3.jpg" alt="بيجامة بيكي عصرية">
-                <div class="badge">1ère Qualité</div>
-                <h3>بيجامة بيكي عصرية</h3>
-                <p class="cod">COD: 2216CH</p>
-                <p class="sizes">المقاسات المتوفرة: L, XL, 2XL, 3XL</p>
-                <a href="https://wa.me/212617107971?text=أريد طلب بيجامة بيكي عصرية كود 2216CH" class="btn-whatsapp" target="_blank">اطلب الآن عبر الواتساب</a>
+            <div class="pro">
+                <img src="prod3.jpg" alt="بيجامة بيكي">
+                <div class="des">
+                    <span>1ère Qualité</span>
+                    <h5>بيجامة بيكي عصرية</h5>
+                    <div class="star">⭐⭐⭐⭐⭐</div>
+                    <h4>COD: 2216CH</h4>
+                    <p class="sizes">المقاسات: L, XL, 2XL, 3XL</p>
+                </div>
+                <a href="https://wa.me/212617107971?text=أريد طلب بيجامة بيكي عصرية كود 2216CH" class="btn-wa" target="_blank">طلب عبر الواتساب 🛒</a>
             </div>
 
-            <div class="product-card">
-                <img src="prod4.jpg" alt="مخور حرير إماراتي فخم (أخضر)">
-                <div class="badge">1ère Qualité</div>
-                <h3>مخور حرير إماراتي فخم (أخضر)</h3>
-                <p class="cod">COD: 2195M</p>
-                <p class="sizes">المقاسات المتوفرة: L, XL, 2XL, 3XL</p>
-                <a href="https://wa.me/212617107971?text=أريد طلب مخور إماراتي أخضر كود 2195M" class="btn-whatsapp" target="_blank">اطلب الآن عبر الواتساب</a>
+            <div class="pro">
+                <img src="prod4.jpg" alt="مخور أخضر">
+                <div class="des">
+                    <span>1ère Qualité</span>
+                    <h5>مخور حرير إماراتي (أخضر)</h5>
+                    <div class="star">⭐⭐⭐⭐⭐</div>
+                    <h4>COD: 2195M</h4>
+                    <p class="sizes">المقاسات: L, XL, 2XL, 3XL</p>
+                </div>
+                <a href="https://wa.me/212617107971?text=أريد طلب مخور إماراتي أخضر كود 2195M" class="btn-wa" target="_blank">طلب عبر الواتساب 🛒</a>
             </div>
 
-            <div class="product-card">
-                <img src="prod5.jpg" alt="مخور حرير إماراتي فخم (برتقالي)">
-                <div class="badge">1ère Qualité</div>
-                <h3>مخور حرير إماراتي فخم (برتقالي)</h3>
-                <p class="cod">COD: 2195M</p>
-                <p class="sizes">المقاسات المتوفرة: M, L, XL, 2XL</p>
-                <a href="https://wa.me/212617107971?text=أريد طلب مخور إماراتي برتقالي كود 2195M" class="btn-whatsapp" target="_blank">اطلب الآن عبر الواتساب</a>
+            <div class="pro">
+                <img src="prod5.jpg" alt="مخور برتقالي">
+                <div class="des">
+                    <span>1ère Qualité</span>
+                    <h5>مخور حرير إماراتي (برتقالي)</h5>
+                    <div class="star">⭐⭐⭐⭐⭐</div>
+                    <h4>COD: 2195M</h4>
+                    <p class="sizes">المقاسات: M, L, XL, 2XL</p>
+                </div>
+                <a href="https://wa.me/212617107971?text=أريد طلب مخور إماراتي برتقالي كود 2195M" class="btn-wa" target="_blank">طلب عبر الواتساب 🛒</a>
             </div>
 
-            <div class="product-card">
-                <img src="prod6.jpg" alt="الكسوة القطرية الفاخرة">
-                <div class="badge">1ère Qualité</div>
-                <h3>الكسوة القطرية الفاخرة</h3>
-                <p class="cod">COD: 2232K</p>
-                <p class="sizes">المقاسات المتوفرة: S, M, L, XL</p>
-                <a href="https://wa.me/212617107971?text=أريد طلب الكسوة القطرية الفاخرة كود 2232K" class="btn-whatsapp" target="_blank">اطلب الآن عبر الواتساب</a>
+            <div class="pro">
+                <img src="prod6.jpg" alt="كسوة قطرية">
+                <div class="des">
+                    <span>1ère Qualité</span>
+                    <h5>الكسوة القطرية الفاخرة</h5>
+                    <div class="star">⭐⭐⭐⭐⭐</div>
+                    <h4>COD: 2232K</h4>
+                    <p class="sizes">المقاسات: S, M, L, XL</p>
+                </div>
+                <a href="https://wa.me/212617107971?text=أريد طلب الكسوة القطرية الفاخرة كود 2232K" class="btn-wa" target="_blank">طلب عبر الواتساب 🛒</a>
             </div>
 
         </div>
     </section>
 
-    <footer id="contact" class="footer">
-        <h3>تواصل معنا</h3>
-        <div class="social-icons">
-            <a href="#">📱 فيسبوك</a>
-            <a href="#">📸 انستغرام</a>
-            <a href="https://wa.me/212617107971" target="_blank">💬 واتساب</a>
+    <footer id="contact" class="section-p1">
+        <div class="col">
+            <h4 style="color: #222; font-size: 1.5rem; margin-bottom: 20px;">MARKABELS</h4>
+            <p><strong>الهاتف / واتساب:</strong> +212617107971</p>
+            <p><strong>ساعات العمل:</strong> 09:00 صباحاً - 20:00 مساءً</p>
+            <div class="follow">
+                <h4>تابعنا على</h4>
+                <div class="icon">
+                    <a href="#">فيسبوك</a> | <a href="#">انستغرام</a>
+                </div>
+            </div>
         </div>
-        <p style="margin-top: 15px; font-size: 0.9rem;">سياسة الخصوصية | شروط الاستخدام</p>
-        <p style="margin-top: 10px;">جميع الحقوق محفوظة &copy; 2026 MARKABELS</p>
+        <div class="copyright">
+            <p>© 2026 MARKABELS - جميع الحقوق محفوظة</p>
+        </div>
     </footer>
 
 </body>
