@@ -37,11 +37,13 @@ a { text-decoration: none; }
 }
 #navbar li a:hover, #navbar li a.active { color: #088178; }
 
-/* قسم الواجهة (Hero) */
+/* قسم الواجهة (Hero) - تم تحديثه ليتناسب مع الحاسوب */
 #hero {
-    height: 60vh;
-    background-size: cover;
-    background-position: center;
+    height: 80vh;
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #f0f0f0;
     padding: 0 80px;
     display: flex;
     flex-direction: column;
@@ -50,10 +52,10 @@ a { text-decoration: none; }
     position: relative;
 }
 
-/* طبقة تعتيم خفيفة فوق الصورة إذا كانت فاتحة جداً */
+/* طبقة تعتيم خفيفة */
 #hero::before {
     content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(255, 255, 255, 0.5); z-index: 1;
+    background: rgba(255, 255, 255, 0.3); z-index: 1;
 }
 
 #hero h4, #hero h2, #hero h1, #hero p, #hero .btn-shop { position: relative; z-index: 2; }
@@ -70,7 +72,7 @@ a { text-decoration: none; }
 }
 .btn-shop:hover { background-color: #088178; color: #fff; }
 
-/* قسم المنتجات (الشبكة) */
+/* قسم المنتجات */
 #products { text-align: center; }
 #products h2 { font-size: 2.5rem; margin-bottom: 10px; }
 #products p { font-size: 1rem; color: #606063; margin-bottom: 40px; }
@@ -89,7 +91,7 @@ a { text-decoration: none; }
     background: #fff;
     box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
     transition: 0.3s ease;
-    text-align: right; /* لمحاذاة النص مع اللغة العربية */
+    text-align: right;
     display: flex;
     flex-direction: column;
 }
@@ -108,7 +110,6 @@ a { text-decoration: none; }
 .pro .des h4 { padding-top: 7px; font-size: 16px; font-weight: bold; color: #088178; }
 .pro .sizes { font-size: 13px; color: #777; margin-top: 5px; }
 
-/* زر الواتساب داخل البطاقة */
 .btn-wa {
     display: block; width: 100%; text-align: center; background-color: #e8f6ea;
     color: #088178; border: 1px solid #cce7d0; padding: 12px; border-radius: 15px;
@@ -117,20 +118,24 @@ a { text-decoration: none; }
 .btn-wa:hover { background-color: #088178; color: #fff; }
 
 /* التذييل */
-footer { display: flex; flex-direction: column; background: #e3e6f3; padding-bottom: 20px !important; }
+footer { display: flex; flex-direction: column; background: #e3e6f3; padding: 40px 80px; }
 footer .col { display: flex; flex-direction: column; align-items: center; margin-bottom: 20px; }
 footer p { font-size: 14px; color: #465b52; margin-bottom: 8px; }
-footer .follow { margin-top: 20px; text-align: center; }
-footer .follow h4 { font-size: 1.1rem; margin-bottom: 10px; }
-footer .follow a { color: #088178; font-weight: bold; margin: 0 5px; }
 footer .copyright { text-align: center; margin-top: 20px; border-top: 1px solid #cce7d0; padding-top: 20px; color: #465b52; }
 
-/* استجابة الشاشات الصغيرة (الهواتف) */
+/* تنسيقات الشاشات الصغيرة (هواتف) */
 @media (max-width: 799px) {
     .section-p1 { padding: 40px 20px; }
     #header { padding: 15px 20px; flex-direction: column; gap: 15px; }
     #navbar { gap: 10px; flex-wrap: wrap; }
-    #hero { padding: 0 20px; background-position: left; }
+    #hero { padding: 0 20px; background-size: cover; background-position: left; }
     #hero h1 { font-size: 2.2rem; }
-    #hero h2 { font-size: 1.8rem; }
+}
+
+/* تنسيق خاص للشاشات الكبيرة جداً */
+@media (min-width: 1024px) {
+    #hero {
+        background-size: cover;
+        background-position: top center;
+    }
 }
